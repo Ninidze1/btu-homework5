@@ -1,6 +1,5 @@
 package btu.android.homework_5.data.repository.implementation
 
-import btu.android.homework_5.data.db.AppDatabase
 import btu.android.homework_5.data.db.UserDao
 import btu.android.homework_5.data.db.UserEntity
 import btu.android.homework_5.data.repository.abstraction.IUserRepository
@@ -11,24 +10,19 @@ import javax.inject.Inject
 
 class UserRepository @Inject constructor(private val db: UserDao) : IUserRepository {
 
-    override suspend fun getAll(): Flow<List<UserUi>> {
-        return db.getAll().map { users ->
-            users.map { it.toPresentation() }
-        }
-    }
-
     override suspend fun insert(user: UserUi) = db.insert(
         UserEntity.fromPresentation(type = user)
     )
 
-    override suspend fun delete(user: UserUi) = db.delete(
-        UserEntity.fromPresentation(type = user)
-    )
+    override suspend fun deleteAll() = db.deleteAll()
 
-    override suspend fun getTotalRunDistance(): Flow<Int> = db.getTotalRunDistance()
+    override fun getTotalRunDistance(): Flow<String> =
+        db.getTotalRunDistance().map { it?.toString() ?: "0" }
 
-    override suspend fun getAverageCoveredDistance(): Flow<Double> = db.getAverageCoveredDistance()
+    override fun getAverageCoveredDistance(): Flow<String> =
+        db.getAverageCoveredDistance().map { it?.toString() ?: "0.0" }
 
-    override suspend fun getAverageCaloriesTaken(): Flow<Double> = db.getAverageCaloriesTaken()
+    override fun getAverageCaloriesTaken(): Flow<String> =
+        db.getAverageCaloriesTaken().map { it?.toString() ?: "0.0" }
 
 }

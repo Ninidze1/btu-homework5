@@ -1,9 +1,9 @@
 <resources xmlns:tools="http://schemas.android.com/tools">
     <!-- Base application theme. -->
-    <style name="Theme.Homework_5" parent="Theme.MaterialComponents.DayNight.DarkActionBar">
+    <style name="Theme.Homework_5" parent="Theme.MaterialComponents.DayNight.NoActionBar">
         <!-- Primary brand color. -->
         <item name="colorPrimary">@color/purple_500</item>
-        <item name="colorPrimaryVariant">@color/purple_700</item>
+        <item name="colorPrimaryVariant">@color/main_color</item>
         <item name="colorOnPrimary">@color/white</item>
         <!-- Secondary brand color. -->
         <item name="colorSecondary">@color/teal_200</item>
@@ -12,5 +12,27 @@
         <!-- Status bar color. -->
         <item name="android:statusBarColor" tools:targetApi="l">?attr/colorPrimaryVariant</item>
         <!-- Customize your theme here. -->
+    </style>
+
+    <!-- TextInputLayout Hint Text Appearance. -->
+    <style name="InputHintTextLabel" parent="TextAppearance.AppCompat">
+        <item name="android:letterSpacing">-0.01</item>
+        <item name="android:fontFamily">@font/montera_regular</item>
+        <item name="android:textSize">14sp</item>
+    </style>
+
+    <!-- TextInputLayout Style -->
+    <style name="CustomTextInputLayout" parent="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox">
+        <item name="hintTextAppearance">@style/InputHintTextLabel</item>
+        <item name="android:textColorHint">@color/gray</item>
+        <item name="hintTextColor">@color/light_gray</item>
+        <item name="boxStrokeColor">@color/main_color</item>
+        <item name="boxCornerRadiusBottomEnd">8dp</item>
+        <item name="boxCornerRadiusBottomStart">8dp</item>
+        <item name="boxCornerRadiusTopEnd">8dp</item>
+        <item name="boxCornerRadiusTopStart">8dp</item>
+        <item name="boxStrokeWidth">1dp</item>
+        <item name="boxStrokeWidthFocused">1dp</item>
+
     </style>
 </resources>

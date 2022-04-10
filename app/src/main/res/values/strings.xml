@@ -1,3 +1,19 @@
 <resources>
     <string name="app_name">homework_5</string>
+    <string name="my_activities">My Activities</string>
+    <string name="running_distance">Running distance</string>
+    <string name="km">Km</string>
+    <string name="swimming_distance">Swimming distance</string>
+    <string name="calories">Calories</string>
+    <string name="today">Today</string>
+    <string name="total_distance">Total distance</string>
+    <string name="average_running_distance">Average running distance</string>
+    <string name="average_swimming_distance">Average swimming distance</string>
+    <string name="average_calories">Average calories consumed</string>
+    <string name="avg_swimming_running_distance">Avg Swimming / Running Distance</string>
+    <string name="kcal">Kcal</string>
+    <string name="null_value">0</string>
+    <string name="save">Save</string>
+    <string name="float_zero">0.0</string>
+    <string name="reset">Reset</string>
 </resources>
